@@ -752,7 +752,7 @@ $CheckDetail = "Trigger(s) without a description value."
 Write-Host "Running check... " $CheckDetail
 $Severity = "Low"
 ForEach ($Trigger in $Triggers) {
-    $TriggerName = (CleanName -RawValue $Pipeline.name.ToString())
+    $TriggerName = (CleanName -RawValue $Trigger.name.ToString())
     $TriggerDescription = $Trigger.properties.description
 
     if (([string]::IsNullOrEmpty($TriggerDescription))) {
