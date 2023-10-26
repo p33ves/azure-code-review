@@ -840,6 +840,7 @@ if ($SummaryOutput) {
             "$e[${color}m$($_.Severity)${e}[0m"
         }
     }
+    $SummaryTable | Export-Csv -path <pathToReport>\SynapseSummaryTable.csv -NoTypeInformation
 }
 
 if ($VerboseOutput) {
@@ -867,4 +868,5 @@ if ($VerboseOutput) {
             "$e[${color}m$($_.Severity)${e}[0m"
         }
     }
+    $VerboseDetailTable | Export-Csv -path <pathToReport>\SynapseVerboseTable.csv -NoTypeInformation
 }
