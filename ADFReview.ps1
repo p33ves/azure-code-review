@@ -837,6 +837,7 @@ if ($SummaryOutput) {
             "$e[${color}m$($_.Severity)${e}[0m"
         }
     }
+    $SummaryTable | Export-Csv -path <pathToReport>\ADFSummaryTable.csv -NoTypeInformation
 }
 
 if ($VerboseOutput) {
@@ -864,4 +865,5 @@ if ($VerboseOutput) {
             "$e[${color}m$($_.Severity)${e}[0m"
         }
     }
+    $VerboseDetailTable | Export-Csv -path <pathToReport>\ADFVerboseTable.csv -NoTypeInformation
 }
