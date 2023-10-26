@@ -528,7 +528,9 @@ Write-Host "Running check... " $CheckDetail
 $Severity = "Medium"
 ForEach ($RedundantResource in $RedundantResources | Where-Object { $_ -like "linkedServices*" }) {
     $Parts = $RedundantResource.Split('|')
-
+    if ($Parts[1]  -match '-WorkspaceDefaultS') {
+        continue
+    }
     $CheckCounter += 1
     if ($VerboseOutput) {  
         $VerboseDetailTable += [PSCustomObject]@{
