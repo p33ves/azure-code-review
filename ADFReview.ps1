@@ -1,7 +1,7 @@
 <#
 .PARAMETER FactoryName
     Name of the Azure Data Factory
-        example: bbyc-df-dpdev-edl-df-dev-002
+        example: test-adf-1
 .PARAMETER ARMTemplateFilePath
     Arm template file path
         example: C:\Adf\ArmTemplateOutput\ARMTemplateForFactory.json
