@@ -1,7 +1,7 @@
 <#
 .PARAMETER WorkspaceName
     Name of the Azure Synapse Workspace
-        example: bbyc-df-dpdev-edl-df-dev-002
+        example: test-synapse-1
 .PARAMETER ARMTemplateFilePath
     Arm template file path
         example: C:\Adf\ArmTemplateOutput\ARMTemplateForFactory.json
